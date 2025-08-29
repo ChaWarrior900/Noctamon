@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiki NoctaMon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: white;
+      display: flex;
+    }
+
+    /* Menu latéral */
+    aside {
+      width: 250px;
+      background: #111;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+
+    aside h2 {
+      color: #f4d03f;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+    }
+
+    aside a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin: 10px 0;
+      transition: 0.3s;
+    }
+
+    aside a:hover {
+      color: #f4d03f;
+    }
+
+    /* Contenu */
+    main {
+      margin-left: 270px;
+      padding: 30px;
+      max-width: 900px;
+    }
+
+    main h1 {
+      color: #f4d03f;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    section h2 {
+      color: #f4d03f;
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <h2>Wiki NoctaMon</h2>
+    <a href="#start">🚀 Démarrer</a>
+    <a href="#gameplay">🎮 Gameplay</a>
+    <a href="#coins">💎 NoctaCoins</a>
+    <a href="#grades">⚡ Grades</a>
+    <a href="#faq">❓ FAQ</a>
+    <a href="index.html">⬅ Retour au site</a>
+  </aside>
+
+  <main>
+    <h1>Bienvenue sur le Wiki NoctaMon</h1>
+
+    <section id="start">
+      <h2>🚀 Démarrer sur le serveur</h2>
+      <p>1. Télécharge le modpack sur CurseForge.<br>
+      2. Rejoins le serveur avec l’IP : <b>noctamon.minesr.com</b>.<br>
+      3. Amuse-toi et deviens le meilleur dresseur !</p>
+    </section>
+
+    <section id="gameplay">
+      <h2>🎮 Gameplay Pixelmon</h2>
+      <p>Capture des Pokémon, entraîne-les, combats d'autres joueurs et explore le monde Minecraft avec Pixelmon.</p>
+    </section>
+
+    <section id="coins">
+      <h2>💎 NoctaCoins</h2>
+      <p>Les <b>NoctaCoins</b> sont la monnaie du serveur. Tu peux les acheter via la boutique et les utiliser pour obtenir des packs spéciaux et des avantages en jeu.</p>
+    </section>
+
+    <section id="grades">
+      <h2>⚡ Grades</h2>
+      <p>Les grades te permettent d’avoir plus de privilèges et d’avantages en jeu. Consulte la boutique pour savoir comment en obtenir.</p>
+    </section>
+
+    <section id="faq">
+      <h2>❓ FAQ</h2>
+      <p><b>Q :</b> Comment rejoindre le serveur ?<br>
+      <b>R :</b> Télécharge le modpack NoctaMon et connecte-toi avec l’IP donnée.</p>
+      <p><b>Q :</b> Où acheter des NoctaCoins ?<br>
+      <b>R :</b> Dans la boutique officielle du site.</p>
+    </section>
+  </main>
+
+</body>
+</html>
