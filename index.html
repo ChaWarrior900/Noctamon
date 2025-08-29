@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #1a1a1a, #333);
-      color: white;
+      background: linear-gradient(to bottom, #001f3f, #003366); /* fond sombre bleu */
+      color: #ffffff;
       text-align: center;
       scroll-behavior: smooth;
     }
@@ -19,18 +19,180 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #111;
+      background: #00264d; /* bleu foncé menu */
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.5);
       z-index: 1000;
     }
 
     nav a {
-      color: #f4d03f;
+      color: #ffbd69; /* liens du menu jaune/orangé */
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
       transition: 0.3s;
     }
 
-    nav a:hove
+    nav a:hover {
+      color: #ffa500; /* orange au survol */
+    }
+
+    header {
+      padding: 100px 20px 20px 20px; /* décalage pour le menu fixe */
+      background: #004080; /* header bleu clair */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #ffbd69; /* titre jaune/orangé */
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 5px 0 5px;
+      padding: 12px 25px;
+      background: #ff5733; /* boutons orange */
+      color: white; 
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e64a19; /* orange foncé au survol */
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      max-width: 100%;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    /* Boutique */
+    #boutique {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    #boutique h2 {
+      margin-bottom: 30px;
+      color: #ffbd69; /* titre boutique jaune/orangé */
+    }
+
+    #boutique .product {
+      background: #003366; /* bloc boutique bleu foncé */
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    #boutique .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    }
+
+    #boutique .product h3 {
+      margin-top: 0;
+      color: #ffbd69; /* titre produit */
+    }
+
+    #boutique .product p {
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #00264d; /* footer bleu foncé */
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #ffffff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Menu de navigation -->
+  <nav>
+    <a href="#infos">Infos Serveur</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#liens">Liens Utiles</a>
+    <a href="#boutique">Boutique</a>
+  </nav>
+
+  <header>
+    <h1>Serveur NoctaMon</h1>
+    <p>Rejoins l’aventure Pokémon dans Minecraft !</p>
+    <a class="btn" href="#">IP: noctamon.minesr.com</a>
+  </header>
+
+  <section id="infos">
+    <h2>⚡ Infos Serveur</h2>
+    <p>Version : 1.16.5<br>
+    Mod : NoctaMon CurseForge <br>
+    Rejoins notre communauté et attrape-les tous !</p>
+  </section>
+
+  <section id="galerie" class="gallery">
+    <h2>📸 Galerie</h2>
+    <img src="https://via.placeholder.com/250x150.png?text=Pixelmon+1" alt="screenshot1">
+    <img src="https://via.placeholder.com/250x150.png?text=Pixelmon+2" alt="screenshot2">
+    <img src="https://via.placeholder.com/250x150.png?text=Pixelmon+3" alt="screenshot3">
+  </section>
+
+  <section id="liens">
+    <h2>🔗 Liens Utiles</h2>
+    <p>
+      <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
+      <a class="btn" href="https://reforged.gg/" target="_blank">Télécharger Pixelmon</a>
+      <a class="btn" href="#boutique">Boutique</a>
+    </p>
+  </section>
+
+  <!-- Section Boutique -->
+  <section id="boutique">
+    <h2>🛒 Boutique</h2>
+    <div class="product">
+      <h3>Pack Starter Pokémon</h3>
+      <p>5€ - Obtiens un starter rare pour ton aventure Pixelmon !</p>
+      <a class="btn" href="https://paypal.me/tonlien1" target="_blank">Acheter</a>
+    </div>
+    <div class="product">
+      <h3>Cosmétiques VIP</h3>
+      <p>10€ - Accède à des skins et effets spéciaux exclusifs !</p>
+      <a class="btn" href="https://paypal.me/tonlien2" target="_blank">Acheter</a>
+    </div>
+    <div class="product">
+      <h3>Boost XP x2</h3>
+      <p>7€ - Double l'expérience de tes Pokémon pendant 24h !</p>
+      <a class="btn" href="https://paypal.me/tonlien3" target="_blank">Acheter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Serveur Pixelmon | Fait avec ❤️ par notre équipe</p>
+  </footer>
+
+</body>
+</html>
