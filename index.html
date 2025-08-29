@@ -1,146 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NoctaMon</title>
-<style>
-  /* RESET ET TYPO */
-  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
-  body { background: #0d1117; color: #e4e6eb; text-align: center; scroll-behavior: smooth; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serveur Pixelmon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      color: white;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
 
-  /* MENU FIXE */
-  nav {
-    position: fixed;
-    top:0; width:100%; padding: 15px 0;
-    background: rgba(15, 20, 30, 0.85); backdrop-filter: blur(6px);
-    display: flex; justify-content: center; gap: 25px;
-    z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  }
-  nav a { color: #ff6f61; text-decoration: none; font-weight: 600; transition: 0.3s; }
-  nav a:hover { color: #ffa07a; }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #111;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+      z-index: 1000;
+    }
 
-  /* HEADER */
-  header {
-    padding: 120px 20px 60px 20px;
-    background: #161b26; border-bottom: 1px solid #222;
-  }
-  header h1 { font-size: 3em; color: #ff6f61; margin-bottom: 15px; }
-  header p { font-size: 1.2em; color: #cbd5e0; margin-bottom: 20px; }
-  .btn { display: inline-block; padding: 12px 28px; border-radius: 30px;
-         background: #ff6f61; color: #fff; text-decoration: none; font-weight: 600;
-         transition: 0.3s; box-shadow: 0 4px 10px rgba(255,111,97,0.3); }
-  .btn:hover { background: #ff8470; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(255,111,97,0.4); }
+    nav a {
+      color: #f4d03f;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-  /* SECTIONS */
-  section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-  section h2 { font-size: 2em; margin-bottom: 25px; color: #ff6f61; }
+    nav a:hover {
+      color: #d4ac0d;
+    }
 
-  /* GALERIE */
-  .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-  .gallery img { width: 260px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: 0.3s; }
-  .gallery img:hover { transform: scale(1.05); }
+    header {
+      padding: 100px 20px 20px 20px;
+      background: #222;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
 
-  /* LIENS UTILES */
-  #liens p { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #f4d03f;
+      text-shadow: 2px 2px 6px black;
+    }
 
-  /* BOUTIQUE */
-  #boutique .product {
-    background: #1c2230; padding: 25px; border-radius: 15px;
-    margin: 20px 0; box-shadow: 0 6px 15px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s;
-    display: flex; flex-direction: column; align-items: center; gap: 10px;
-  }
-  #boutique .product:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
-  #boutique .product h3 { color: #ff6f61; margin-bottom: 10px; }
-  #boutique .product p { color: #cbd5e0; margin-bottom: 5px; }
-  #boutique .product img { width: 80px; margin-bottom: 10px; }
+    .btn {
+      display: inline-block;
+      margin: 10px 5px 0 5px;
+      padding: 12px 25px;
+      background: #f4d03f;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #d4ac0d;
+    }
 
-  /* FOOTER */
-  footer { background: #161b26; padding: 25px; font-size: 0.9em; color: #8a8f98; margin-top: 60px; }
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-</style>
+    footer {
+      background: #111;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <a href="#infos">Infos</a>
-  <a href="#galerie">Galerie</a>
-  <a href="#liens">Liens</a>
-  <a href="#boutique">Boutique</a>
-</nav>
+  <nav>
+    <a href="#infos">Infos Serveur</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#liens">Liens Utiles</a>
+    <a href="#boutique">Boutique</a>
+    <a href="wiki.html">Wiki</a>
+  </nav>
 
-<header>
-  <h1>NoctaMon</h1>
-  <p>Rejoins l’aventure Pokémon dans Minecraft !</p>
-  <a class="btn" href="#">IP: noctamon.minesr.com</a>
-</header>
+  <header>
+    <h1>Serveur NoctaMon</h1>
+    <p>Rejoins l’aventure Pokémon dans Minecraft !</p>
+    <a class="btn" href="#">IP: noctamon.minesr.com</a>
+  </header>
 
-<section id="infos">
-  <h2>⚡ Infos Serveur</h2>
-  <p>Version : 1.16.5<br>Mod : NoctaMon CurseForge<br>Rejoins notre communauté et attrape-les tous !</p>
-</section>
+  <section id="infos">
+    <h2>⚡ Infos Serveur</h2>
+    <p>Version : 1.16.5<br>
+    Mod : NoctaMon CurseForge <br>
+    Rejoins notre communauté et attrape-les tous !</p>
+  </section>
 
-<section id="galerie" class="gallery">
-  <h2>📸 Galerie</h2>
-  <img src="https://via.placeholder.com/260x150.png?text=Pixelmon+1" alt="Pixelmon 1">
-  <img src="https://via.placeholder.com/260x150.png?text=Pixelmon+2" alt="Pixelmon 2">
-  <img src="https://via.placeholder.com/260x150.png?text=Pixelmon+3" alt="Pixelmon 3">
-</section>
+  <section id="galerie">
+    <h2>📸 Galerie</h2>
+    <img src="https://via.placeholder.com/250x150.png?text=Pixelmon+1" alt="screenshot1">
+    <img src="https://via.placeholder.com/250x150.png?text=Pixelmon+2" alt="screenshot2">
+    <img src="https://via.placeholder.com/250x150.png?text=Pixelmon+3" alt="screenshot3">
+  </section>
 
-<section id="liens">
-  <h2>🔗 Liens Utiles</h2>
-  <p>
-    <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
-    <a class="btn" href="https://reforged.gg/" target="_blank">Télécharger Pixelmon</a>
-    <a class="btn" href="#boutique">Boutique</a>
-  </p>
-</section>
+  <section id="liens">
+    <h2>🔗 Liens Utiles</h2>
+    <p>
+      <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
+      <a class="btn" href="https://reforged.gg/" target="_blank">Télécharger Pixelmon</a>
+      <a class="btn" href="#boutique">Boutique</a>
+    </p>
+  </section>
 
-<section id="boutique">
-  <h2>🛒 Boutique NoctaCoins</h2>
+  <section id="boutique">
+    <h2>🛒 Boutique</h2>
+    <p>Rendez-vous dans la boutique pour acheter vos NoctaCoins et débloquer des avantages en jeu !</p>
+  </section>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/80x80.png?text=10C" alt="10 NoctaCoins">
-    <h3>10 NoctaCoins</h3>
-    <p>4€ - Obtiens 10 NoctaCoins</p>
-    <a class="btn" href="https://paypal.me/EmmaMorina/4" target="_blank">Acheter</a>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/80x80.png?text=30C" alt="30 NoctaCoins">
-    <h3>30 NoctaCoins</h3>
-    <p>12€ - Obtiens 30 NoctaCoins</p>
-    <a class="btn" href="https://paypal.me/EmmaMorina/12" target="_blank">Acheter</a>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/80x80.png?text=50C" alt="50 NoctaCoins">
-    <h3>50 NoctaCoins</h3>
-    <p>25€ - Obtiens 50 NoctaCoins</p>
-    <a class="btn" href="https://paypal.me/EmmaMorina/25" target="_blank">Acheter</a>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/80x80.png?text=100C" alt="100 NoctaCoins">
-    <h3>100 NoctaCoins</h3>
-    <p>50€ - Obtiens 100 NoctaCoins</p>
-    <a class="btn" href="https://paypal.me/EmmaMorina/50" target="_blank">Acheter</a>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/80x80.png?text=200C" alt="200 NoctaCoins">
-    <h3>200 NoctaCoins</h3>
-    <p>90€ - Obtiens 200 NoctaCoins</p>
-    <a class="btn" href="https://paypal.me/EmmaMorina/90" target="_blank">Acheter</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Serveur Pixelmon | Fait avec ❤️ par notre équipe</p>
-</footer>
+  <footer>
+    <p>© 2025 Serveur Pixelmon | Fait avec ❤️ par notre équipe</p>
+  </footer>
 
 </body>
 </html>
+
 
 
 
