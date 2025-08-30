@@ -21,8 +21,8 @@
       padding: 14px 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.8);
       z-index: 1000;
-      backdrop-filter: blur(6px);
       text-align: center;
+      backdrop-filter: blur(6px);
     }
 
     nav a {
@@ -33,9 +33,7 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #ff00c8;
-    }
+    nav a:hover { color: #ff00c8; }
 
     header {
       padding: 100px 20px 40px 20px;
@@ -59,7 +57,7 @@
 
     section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
     }
 
@@ -155,88 +153,57 @@
     <h2>⚡ Comment débuter</h2>
     <p>Pour jouer sur NoctaMon :</p>
     <ul>
-      <li>Installe le <strong>Launcher NoctaMon</strong> depuis l’index.</li>
+      <li>Installe le <strong>Launcher NoctaMon</strong>.</li>
       <li>Connecte ton compte Microsoft.</li>
       <li>La version est déjà sélectionnée, clique sur <strong>Jouer</strong>.</li>
     </ul>
   </section>
 
-  <!-- Pixelmon Bases & Crafts -->
+  <!-- Crafts -->
   <section>
-    <h2>🎮 Pixelmon - Bases et Crafts</h2>
-    <p>Voici les principaux crafts pour bien débuter :</p>
+    <h2>🎨 Crafts de base</h2>
+    <p>Les principaux objets à crafter :</p>
     <table>
-      <tr>
-        <th>Objet</th>
-        <th>Craft</th>
-        <th>Usage</th>
-      </tr>
-      <tr>
-        <td>Pokéball</td>
-        <td>1 Boule + 1 Poudre Rouge</td>
-        <td>Capturer un Pokémon de base</td>
-      </tr>
-      <tr>
-        <td>Great Ball</td>
-        <td>1 Pokéball + 1 Étoile + 1 Poudre Rouge</td>
-        <td>Meilleure chance de capture</td>
-      </tr>
-      <tr>
-        <td>Ultra Ball</td>
-        <td>1 Great Ball + 1 Étoile + 1 Poudre Rouge</td>
-        <td>Haute chance de capture</td>
-      </tr>
-      <tr>
-        <td>Potion</td>
-        <td>1 Bouteille d’eau + 1 Herbe</td>
-        <td>Soigner 20 PV</td>
-      </tr>
-      <tr>
-        <td>Super Potion</td>
-        <td>2 Potions + 1 Baie</td>
-        <td>Soigner 50 PV</td>
-      </tr>
+      <tr><th>Objet</th><th>Craft</th><th>Usage</th></tr>
+      <tr><td>Pokéball</td><td>1 Pokéball + 1 Fer + 1 Poudre Rouge</td><td>Capture standard</td></tr>
+      <tr><td>Great Ball</td><td>1 Pokéball + 1 Fer + 1 Poudre Rouge</td><td>Meilleure capture</td></tr>
+      <tr><td>Ultra Ball</td><td>1 Pokéball + 1 Diamant + 1 Poudre Rouge</td><td>Capture haut niveau</td></tr>
+      <tr><td>Potion</td><td>Bouteille d’eau + Herbe</td><td>Soigne 20 PV</td></tr>
+      <tr><td>Super Potion</td><td>2 Potions + Baie</td><td>Soigne 50 PV</td></tr>
     </table>
   </section>
 
-  <!-- Starters -->
+  <!-- Starters par génération -->
   <section>
-    <h2>🌱 Starters</h2>
-    <p>Choisis ton Pokémon de départ sur NoctaMon :</p>
+    <h2>🌱 Starters - Génération 1</h2>
     <table>
-      <tr>
-        <th>Pokémon</th>
-        <th>Type</th>
-        <th>Attaque de base</th>
-        <th>Évolution</th>
-      </tr>
-      <tr>
-        <td>Bulbizarre</td>
-        <td>Plante/Poison</td>
-        <td>Charge, Fouet Lianes</td>
-        <td>Herbizarre → Florizarre</td>
-      </tr>
-      <tr>
-        <td>Salamèche</td>
-        <td>Feu</td>
-        <td>Griffe, Flammèche</td>
-        <td>Reptincel → Dracaufeu</td>
-      </tr>
-      <tr>
-        <td>Carapuce</td>
-        <td>Eau</td>
-        <td>Pistolet à O, Charge</td>
-        <td>Carabaffe → Tortank</td>
-      </tr>
+      <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
+      <tr><td>Bulbizarre</td><td>Plante/Poison</td><td>Charge, Fouet Lianes</td><td>Herbizarre → Florizarre</td></tr>
+      <tr><td>Salamèche</td><td>Feu</td><td>Griffe, Flammèche</td><td>Reptincel → Dracaufeu</td></tr>
+      <tr><td>Carapuce</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Carabaffe → Tortank</td></tr>
     </table>
   </section>
+
+  <!-- Générations suivantes (exemple Génération 2) -->
+  <section>
+    <h2>🌱 Starters - Génération 2</h2>
+    <table>
+      <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
+      <tr><td>Germignon</td><td>Plante</td><td>Charge, Fouet Lianes</td><td>Macronium → Méganium</td></tr>
+      <tr><td>Héricendre</td><td>Feu</td><td>Griffe, Flammèche</td><td>Feurisson → Typhlosion</td></tr>
+      <tr><td>Kaiminus</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Crocrodil → Aligatueur</td></tr>
+    </table>
+  </section>
+
+  <!-- Générations 3 à 9 -->
+  <!-- Tu pourras ajouter chaque génération ici de la même manière -->
 
   <!-- Gameplay NoctaMon -->
   <section>
     <h2>🌟 Gameplay sur NoctaMon</h2>
     <ul>
-      <li>🎯 <strong>Quêtes :</strong> accomplis des missions pour progresser et gagner des récompenses.</li>
-      <li>🏆 <strong>Arènes :</strong> défie d’autres joueurs et récupère des prix.</li>
+      <li>🎯 <strong>Quêtes :</strong> accomplis des missions et gagne des récompenses.</li>
+      <li>🏆 <strong>Arènes :</strong> défie d’autres joueurs pour obtenir des prix.</li>
       <li>🎁 <strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux pour obtenir des bonus.</li>
       <li>📖 <strong>Pokédex :</strong> capture tous les Pokémon pour devenir un champion.</li>
     </ul>
@@ -247,15 +214,28 @@
     <h2>💰 NoctaCoins</h2>
     <p>Les NoctaCoins sont la monnaie virtuelle :</p>
     <ul>
-      <li>Achète-les via la boutique pour débloquer des avantages en jeu.</li>
-      <li>Permettent d’obtenir des objets exclusifs et faciliter ta progression.</li>
+      <li>Achète-les via la boutique pour débloquer des avantages.</li>
+      <li>Permettent d’obtenir des objets exclusifs et faciliter la progression.</li>
     </ul>
   </section>
 
   <!-- FAQ / Astuces -->
   <section>
+    <h2>❓ FAQ & Astuces</h2>
+    <ul>
+      <li>Entraîne tes Pokémon régulièrement.</li>
+      <li>Utilise les types avantageux pour chaque combat.</li>
+      <li>Explore le serveur pour découvrir Pokémon rares et missions.</li>
+      <li>Accomplis les quêtes pour progresser rapidement.</li>
+    </ul>
+  </section>
 
+  <footer>
+    <p>© 2025 NoctaMon Wiki | Fait avec ❤️ par l’équipe</p>
+  </footer>
 
+</body>
+</html>
 
 
 
