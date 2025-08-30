@@ -5,237 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NoctaMon Wiki</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
-      color: #e0e0e0;
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(15, 15, 30, 0.95);
-      padding: 14px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-      z-index: 1000;
-      text-align: center;
-      backdrop-filter: blur(6px);
-    }
-
-    nav a {
-      color: #00f7ff;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover { color: #ff00c8; }
-
-    header {
-      padding: 100px 20px 40px 20px;
-      background: linear-gradient(135deg, #101020, #181830);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #00f7ff;
-      text-shadow: 0 0 12px rgba(0,247,255,0.8);
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      color: #bdbdbd;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 950px;
-      margin: auto;
-    }
-
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #00f7ff;
-      text-shadow: 0 0 10px rgba(0,247,255,0.6);
-      text-align: center;
-    }
-
-    section p {
-      font-size: 1.1em;
-      margin-bottom: 15px;
-      line-height: 1.6em;
-      color: #ccc;
-      text-align: center;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 30px;
-    }
-
-    th, td {
-      border: 1px solid #555;
-      padding: 10px;
-      color: #e0e0e0;
-      text-align: center;
-    }
-
-    th {
-      background-color: rgba(0,247,255,0.2);
-    }
-
-    td {
-      background-color: rgba(0,0,0,0.3);
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 24px;
-      background: linear-gradient(45deg, #00f7ff, #ff00c8);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
-    }
-
-    footer {
-      background: #111122;
-      padding: 25px;
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #aaa;
-      border-top: 1px solid #222;
-      text-align: center;
-    }
+    body {margin:0;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#0a0a0a,#1e1e2f);color:#e0e0e0;scroll-behavior:smooth;}
+    nav {position:fixed;top:0;width:100%;background:rgba(15,15,30,0.95);padding:14px 0;box-shadow:0 2px 10px rgba(0,0,0,0.8);z-index:1000;text-align:center;backdrop-filter:blur(6px);}
+    nav a {color:#00f7ff;text-decoration:none;margin:0 18px;font-weight:600;transition:color 0.3s;}
+    nav a:hover {color:#ff00c8;}
+    header {padding:100px 20px 40px 20px;background:linear-gradient(135deg,#101020,#181830);box-shadow:0 4px 20px rgba(0,0,0,0.4);text-align:center;}
+    header h1 {margin:0;font-size:3em;color:#00f7ff;text-shadow:0 0 12px rgba(0,247,255,0.8);}
+    header p {font-size:1.2em;margin-top:10px;color:#bdbdbd;}
+    section {padding:60px 20px;max-width:950px;margin:auto;}
+    section h2 {font-size:2em;margin-bottom:20px;color:#00f7ff;text-shadow:0 0 10px rgba(0,247,255,0.6);text-align:center;}
+    section p, section ul {font-size:1.1em;margin-bottom:15px;line-height:1.6em;color:#ccc;text-align:center;}
+    table {width:100%;border-collapse:collapse;margin-bottom:30px;}
+    th, td {border:1px solid #555;padding:10px;color:#e0e0e0;text-align:center;}
+    th {background-color:rgba(0,247,255,0.2);}
+    td {background-color:rgba(0,0,0,0.3);}
+    .btn {display:inline-block;margin:10px;padding:12px 24px;background:linear-gradient(45deg,#00f7ff,#ff00c8);color:white;text-decoration:none;font-weight:bold;border-radius:10px;transition:transform 0.3s, box-shadow 0.3s;}
+    .btn:hover {transform:translateY(-3px);box-shadow:0 0 20px rgba(255,0,200,0.8),0 0 20px rgba(0,247,255,0.8);}
+    footer {background:#111122;padding:25px;margin-top:50px;font-size:0.9em;color:#aaa;border-top:1px solid #222;text-align:center;}
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="boutique.html">Boutique</a>
-    <a href="wiki.html">Wiki</a>
-    <a href="reseaux.html">Réseaux</a>
-  </nav>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="boutique.html">Boutique</a>
+  <a href="wiki.html">Wiki</a>
+  <a href="reseaux.html">Réseaux</a>
+</nav>
 
-  <!-- Header -->
-  <header>
-    <h1>Wiki NoctaMon</h1>
-    <p>Tout ce qu’il faut savoir pour jouer sur NoctaMon et maîtriser Pixelmon</p>
-  </header>
+<header>
+  <h1>Wiki NoctaMon</h1>
+  <p>Tout ce qu’il faut savoir pour jouer sur NoctaMon et maîtriser Pixelmon</p>
+</header>
 
-  <!-- Introduction -->
-  <section>
-    <h2>📖 Introduction</h2>
-    <p>Bienvenue sur le Wiki officiel de NoctaMon. Ici tu trouveras toutes les informations pour débuter sur le serveur et comprendre les bases de Pixelmon.</p>
-  </section>
+<section>
+  <h2>📖 Introduction</h2>
+  <p>Bienvenue sur le Wiki officiel de NoctaMon. Ici tu trouveras toutes les informations pour débuter sur le serveur et comprendre les bases de Pixelmon.</p>
+</section>
 
-  <!-- Comment débuter -->
-  <section>
-    <h2>⚡ Comment débuter</h2>
-    <p>Pour jouer sur NoctaMon :</p>
-    <ul>
-      <li>Installe le <strong>Launcher NoctaMon</strong>.</li>
-      <li>Connecte ton compte Microsoft.</li>
-      <li>La version est déjà sélectionnée, clique sur <strong>Jouer</strong>.</li>
-    </ul>
-  </section>
+<section>
+  <h2>⚡ Comment débuter</h2>
+  <ul>
+    <li>Installe le <strong>Launcher NoctaMon</strong>.</li>
+    <li>Connecte ton compte Microsoft.</li>
+    <li>La version est déjà sélectionnée, clique sur <strong>Jouer</strong>.</li>
+  </ul>
+</section>
 
-  <!-- Crafts -->
-  <section>
-    <h2>🎨 Crafts de base</h2>
-    <p>Les principaux objets à crafter :</p>
-    <table>
-      <tr><th>Objet</th><th>Craft</th><th>Usage</th></tr>
-      <tr><td>Pokéball</td><td>1 Pokéball + 1 Fer + 1 Poudre Rouge</td><td>Capture standard</td></tr>
-      <tr><td>Great Ball</td><td>1 Pokéball + 1 Fer + 1 Poudre Rouge</td><td>Meilleure capture</td></tr>
-      <tr><td>Ultra Ball</td><td>1 Pokéball + 1 Diamant + 1 Poudre Rouge</td><td>Capture haut niveau</td></tr>
-      <tr><td>Potion</td><td>Bouteille d’eau + Herbe</td><td>Soigne 20 PV</td></tr>
-      <tr><td>Super Potion</td><td>2 Potions + Baie</td><td>Soigne 50 PV</td></tr>
-    </table>
-  </section>
+<section>
+  <h2>🎨 Crafts de base</h2>
+  <table>
+    <tr><th>Objet</th><th>Craft</th><th>Usage</th></tr>
+    <tr><td>Pokéball</td><td>1 Fer + 1 Poudre Rouge + 1 Boule</td><td>Capture standard</td></tr>
+    <tr><td>Great Ball</td><td>1 Pokéball + 1 Fer + 1 Poudre Rouge</td><td>Meilleure capture</td></tr>
+    <tr><td>Ultra Ball</td><td>1 Pokéball + 1 Diamant + 1 Poudre Rouge</td><td>Capture haut niveau</td></tr>
+    <tr><td>Potion</td><td>Bouteille d’eau + Herbe</td><td>Soigne 20 PV</td></tr>
+    <tr><td>Super Potion</td><td>2 Potions + Baie</td><td>Soigne 50 PV</td></tr>
+  </table>
+</section>
 
-  <!-- Starters par génération -->
-  <section>
-    <h2>🌱 Starters - Génération 1</h2>
-    <table>
-      <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
-      <tr><td>Bulbizarre</td><td>Plante/Poison</td><td>Charge, Fouet Lianes</td><td>Herbizarre → Florizarre</td></tr>
-      <tr><td>Salamèche</td><td>Feu</td><td>Griffe, Flammèche</td><td>Reptincel → Dracaufeu</td></tr>
-      <tr><td>Carapuce</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Carabaffe → Tortank</td></tr>
-    </table>
-  </section>
+<!-- Starters par génération -->
+<section>
+  <h2>🌱 Starters - Génération 1</h2>
+  <table>
+    <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
+    <tr><td>Bulbizarre</td><td>Plante/Poison</td><td>Charge, Fouet Lianes</td><td>Herbizarre → Florizarre</td></tr>
+    <tr><td>Salamèche</td><td>Feu</td><td>Griffe, Flammèche</td><td>Reptincel → Dracaufeu</td></tr>
+    <tr><td>Carapuce</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Carabaffe → Tortank</td></tr>
+  </table>
+</section>
 
-  <!-- Générations suivantes (exemple Génération 2) -->
-  <section>
-    <h2>🌱 Starters - Génération 2</h2>
-    <table>
-      <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
-      <tr><td>Germignon</td><td>Plante</td><td>Charge, Fouet Lianes</td><td>Macronium → Méganium</td></tr>
-      <tr><td>Héricendre</td><td>Feu</td><td>Griffe, Flammèche</td><td>Feurisson → Typhlosion</td></tr>
-      <tr><td>Kaiminus</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Crocrodil → Aligatueur</td></tr>
-    </table>
-  </section>
+<section>
+  <h2>🌱 Starters - Génération 2</h2>
+  <table>
+    <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
+    <tr><td>Germignon</td><td>Plante</td><td>Charge, Fouet Lianes</td><td>Macronium → Méganium</td></tr>
+    <tr><td>Héricendre</td><td>Feu</td><td>Griffe, Flammèche</td><td>Feurisson → Typhlosion</td></tr>
+    <tr><td>Kaiminus</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Crocrodil → Aligatueur</td></tr>
+  </table>
+</section>
 
-  <!-- Générations 3 à 9 -->
-  <!-- Tu pourras ajouter chaque génération ici de la même manière -->
+<section>
+  <h2>🌱 Starters - Génération 3</h2>
+  <table>
+    <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
+    <tr><td>Arcko</td><td>Plante</td><td>Charge, Fouet Lianes</td><td>Massko → Jungko</td></tr>
+    <tr><td>Poussifeu</td><td>Feu</td><td>Griffe, Flammèche</td><td>Galifeu → Braségali</td></tr>
+    <tr><td>Gobou</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Flobio → Laggron</td></tr>
+  </table>
+</section>
 
-  <!-- Gameplay NoctaMon -->
-  <section>
-    <h2>🌟 Gameplay sur NoctaMon</h2>
-    <ul>
-      <li>🎯 <strong>Quêtes :</strong> accomplis des missions et gagne des récompenses.</li>
-      <li>🏆 <strong>Arènes :</strong> défie d’autres joueurs pour obtenir des prix.</li>
-      <li>🎁 <strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux pour obtenir des bonus.</li>
-      <li>📖 <strong>Pokédex :</strong> capture tous les Pokémon pour devenir un champion.</li>
-    </ul>
-  </section>
+<section>
+  <h2>🌱 Starters - Génération 4</h2>
+  <table>
+    <tr><th>Pokémon</th><th>Type</th><th>Attaques de base</th><th>Évolution</th></tr>
+    <tr><td>Tortipouss</td><td>Plante</td><td>Charge, Fouet Lianes</td><td>Boskara → Torterra</td></tr>
+    <tr><td>Ouisticram</td><td>Feu</td><td>Griffe, Flammèche</td><td>Chimpenfeu → Simiabraz</td></tr>
+    <tr><td>Galifeu</td><td>Eau</td><td>Pistolet à O, Charge</td><td>Pandarbare → Laggron</td></tr>
+  </table>
+</section>
 
-  <!-- NoctaCoins -->
-  <section>
-    <h2>💰 NoctaCoins</h2>
-    <p>Les NoctaCoins sont la monnaie virtuelle :</p>
-    <ul>
-      <li>Achète-les via la boutique pour débloquer des avantages.</li>
-      <li>Permettent d’obtenir des objets exclusifs et faciliter la progression.</li>
-    </ul>
-  </section>
+<!-- Générations 5 à 9 suivront le même format -->
 
-  <!-- FAQ / Astuces -->
-  <section>
-    <h2>❓ FAQ & Astuces</h2>
-    <ul>
-      <li>Entraîne tes Pokémon régulièrement.</li>
-      <li>Utilise les types avantageux pour chaque combat.</li>
-      <li>Explore le serveur pour découvrir Pokémon rares et missions.</li>
-      <li>Accomplis les quêtes pour progresser rapidement.</li>
-    </ul>
-  </section>
+<section>
+  <h2>🌟 Gameplay sur NoctaMon</h2>
+  <ul>
+    <li>🎯 <strong>Quêtes :</strong> accomplis des missions et gagne des récompenses.</li>
+    <li>🏆 <strong>Arènes :</strong> défie d’autres joueurs pour obtenir des prix.</li>
+    <li>🎁 <strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux pour obtenir des bonus.</li>
+    <li>📖 <strong>Pokédex :</strong> capture tous les Pokémon pour devenir un champion.</li>
+  </ul>
+</section>
 
-  <footer>
-    <p>© 2025 NoctaMon Wiki | Fait avec ❤️ par l’équipe</p>
-  </footer>
+<section>
+  <h2>💰 NoctaCoins</h2>
+  <ul>
+    <li>Achète-les via la boutique pour débloquer des avantages.</li>
+    <li>Permettent d’obtenir des objets exclusifs et faciliter la progression.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 NoctaMon Wiki | Fait avec ❤️ par l’équipe</p>
+</footer>
 
 </body>
 </html>
+
 
 
 
