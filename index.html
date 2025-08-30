@@ -5,13 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NoctaMon</title>
   <style>
+    :root {
+      --bg-color: #0a0a0a;
+      --bg-gradient: linear-gradient(135deg, #0a0a0a, #1e1e2f);
+      --text-color: #e0e0e0;
+      --btn-gradient: linear-gradient(45deg, #00f7ff, #ff00c8);
+      --btn-hover-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
+    }
+
+    body.light {
+      --bg-color: #f5f5f5;
+      --bg-gradient: linear-gradient(135deg, #ffffff, #d0d0f0);
+      --text-color: #111;
+      --btn-gradient: linear-gradient(45deg, #00c8ff, #ff00c8);
+      --btn-hover-shadow: 0 0 20px rgba(255,0,200,0.5), 0 0 20px rgba(0,200,255,0.5);
+    }
+
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
-      color: #e0e0e0;
+      background: var(--bg-gradient);
+      color: var(--text-color);
       text-align: center;
       scroll-behavior: smooth;
+      transition: all 0.3s ease;
     }
 
     /* Navigation */
@@ -42,6 +59,7 @@
       padding: 120px 20px 40px 20px;
       background: linear-gradient(135deg, #101020, #181830);
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      position: relative;
     }
 
     header h1 {
@@ -61,7 +79,7 @@
       display: inline-block;
       margin: 12px 8px;
       padding: 14px 28px;
-      background: linear-gradient(45deg, #00f7ff, #ff00c8);
+      background: var(--btn-gradient);
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -72,7 +90,7 @@
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
+      box-shadow: var(--btn-hover-shadow);
     }
 
     section {
@@ -93,7 +111,7 @@
       font-size: 1.1em;
       margin-bottom: 20px;
       line-height: 1.6em;
-      color: #ccc;
+      color: var(--text-color);
     }
 
     section ul {
@@ -122,6 +140,14 @@
       color: #00f7ff;
       text-shadow: 0 0 8px rgba(0,247,255,0.6);
     }
+
+    /* Bouton mode sombre/claire */
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
@@ -141,6 +167,7 @@
     <a class="btn" href="#">IP: noctamon.minesr.com</a>
     <br>
     <a class="btn" href="LIEN_DU_LAUNCHER" target="_blank">Télécharger le Launcher</a>
+    <button id="theme-toggle" class="btn">🌙 Mode Sombre/Clair</button>
   </header>
 
   <!-- Compteur de joueurs -->
@@ -159,14 +186,12 @@
     </ul>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer sans Discord -->
   <footer>
-    <p>Rejoins notre communauté :</p>
-    <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
     <p>© 2025 NoctaMon | Fait avec ❤️ par l’équipe</p>
   </footer>
 
-  <!-- Script compteur joueurs -->
+  <!-- Script compteur joueurs et mode clair/sombre -->
   <script>
     async function updatePlayers() {
       try {
@@ -185,12 +210,17 @@
     }
 
     updatePlayers();
-    setInterval(updatePlayers, 10000); // mise à jour toutes les 10s
+    setInterval(updatePlayers, 10000);
+
+    // Mode clair/sombre
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+    });
   </script>
 
 </body>
 </html>
-
 
 
 
