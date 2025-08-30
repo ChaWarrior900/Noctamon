@@ -3,28 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoctaMon - Réseaux Sociaux</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>NoctaMon - Réseaux</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
+      color: #e0e0e0;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 15, 30, 0.95);
+      padding: 14px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: #00f7ff;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff00c8;
+    }
+
+    header {
+      padding: 120px 20px 40px 20px;
+      background: linear-gradient(135deg, #101020, #181830);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #00f7ff;
+      text-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 15px 8px;
+      padding: 14px 28px;
+      background: linear-gradient(45deg, #00f7ff, #ff00c8);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 25px;
+      color: #00f7ff;
+      text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
+    }
+
+    footer {
+      background: #111122;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+      border-top: 1px solid #222;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Menu navigation -->
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="boutique.html">Boutique</a>
+    <a href="wiki.html">Wiki</a>
+    <a href="reseaux.html">Réseaux</a>
+  </nav>
+
+  <!-- En-tête -->
   <header>
-    <h1>🌐 Rejoins NoctaMon sur les réseaux</h1>
+    <h1>🌐 Nos Réseaux</h1>
+    <p>Retrouve NoctaMon sur toutes nos plateformes sociales !</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Nos réseaux officiels</h2>
-      <div class="social-buttons">
-        <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
-        <a class="btn" href="https://twitter.com/TONCOMPTE" target="_blank">Twitter</a>
-        <a class="btn" href="https://www.tiktok.com/@TONCOMPTE" target="_blank">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/TONCOMPTE" target="_blank">Instagram</a>
-      </div>
-    </section>
-  </main>
+  <!-- Réseaux sociaux -->
+  <section>
+    <h2>Rejoins-nous</h2>
+    <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
+    <a class="btn" href="https://twitter.com/TONCOMPTE" target="_blank">Twitter</a>
+    <a class="btn" href="https://www.tiktok.com/@TONCOMPTE" target="_blank">TikTok</a>
+    <a class="btn" href="https://www.instagram.com/TONCOMPTE" target="_blank">Instagram</a>
+  </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 NoctaMon | Fait avec ❤️ par l’équipe</p>
   </footer>
+
 </body>
 </html>
