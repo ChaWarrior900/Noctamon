@@ -6,7 +6,6 @@
   <title>NoctaMon</title>
   <style>
     :root {
-      --bg-color: #0a0a0a;
       --bg-gradient: linear-gradient(135deg, #0a0a0a, #1e1e2f);
       --text-color: #e0e0e0;
       --btn-gradient: linear-gradient(45deg, #00f7ff, #ff00c8);
@@ -14,7 +13,6 @@
     }
 
     body.light {
-      --bg-color: #f5f5f5;
       --bg-gradient: linear-gradient(135deg, #ffffff, #d0d0f0);
       --text-color: #111;
       --btn-gradient: linear-gradient(45deg, #00c8ff, #ff00c8);
@@ -35,7 +33,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(15, 15, 30, 0.95);
+      background: rgba(15,15,30,0.95);
       padding: 14px 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.8);
       z-index: 1000;
@@ -60,7 +58,6 @@
       padding: 140px 20px 60px 20px;
       background: linear-gradient(135deg, #101020, #181830);
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -70,7 +67,7 @@
       margin: 0;
       font-size: 3em;
       color: #00f7ff;
-      text-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
+      text-shadow: 0 0 12px rgba(0,247,255,0.8);
     }
 
     header p {
@@ -109,7 +106,7 @@
       font-size: 2em;
       margin-bottom: 25px;
       color: #00f7ff;
-      text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
+      text-shadow: 0 0 10px rgba(0,247,255,0.6);
     }
 
     section p, section li {
@@ -191,17 +188,19 @@
   <script>
     // Compteur joueurs
     async function updatePlayers() {
+      const countElement = document.getElementById("player-count");
       try {
-        const response = await fetch("http://localhost:4000/status");
+        const response = await fetch("http://localhost:3000/status"); // Ajuste le port si nécessaire
+        if (!response.ok) throw new Error("Erreur réseau");
         const data = await response.json();
-        const countElement = document.getElementById("player-count");
-        if(data.online) {
+        if (data && typeof data.players === "number" && typeof data.maxPlayers === "number") {
           countElement.textContent = `👥 Joueurs connectés : ${data.players} / ${data.maxPlayers}`;
         } else {
-          countElement.textContent = "❌ Serveur hors ligne";
+          countElement.textContent = "⚠ Données serveur invalides";
         }
-      } catch {
-        document.getElementById("player-count").textContent = "⚠ Impossible de récupérer le statut";
+      } catch (err) {
+        console.error("Erreur récupération statut :", err);
+        countElement.textContent = "⚠ Impossible de récupérer le statut";
       }
     }
     updatePlayers();
@@ -216,6 +215,7 @@
 
 </body>
 </html>
+
 
 
 
