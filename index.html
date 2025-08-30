@@ -6,26 +6,27 @@
   <title>NoctaMon</title>
   <style>
     :root {
-      --bg-gradient: linear-gradient(135deg, #0a0a0a, #1e1e2f);
+      --bg-color: #0a0a0a;
+      --bg-header: #101020;
       --text-color: #e0e0e0;
-      --btn-gradient: linear-gradient(45deg, #00f7ff, #ff00c8);
+      --btn-bg: linear-gradient(45deg, #00f7ff, #ff00c8);
       --btn-hover-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
     }
 
     body.light {
-      --bg-gradient: linear-gradient(135deg, #ffffff, #d0d0f0);
+      --bg-color: #f0f0f0;
+      --bg-header: #ffffff;
       --text-color: #111;
-      --btn-gradient: linear-gradient(45deg, #00c8ff, #ff00c8);
+      --btn-bg: linear-gradient(45deg, #00c8ff, #ff00c8);
       --btn-hover-shadow: 0 0 20px rgba(255,0,200,0.5), 0 0 20px rgba(0,200,255,0.5);
     }
 
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-gradient);
+      background-color: var(--bg-color);
       color: var(--text-color);
       text-align: center;
-      scroll-behavior: smooth;
       transition: all 0.3s ease;
     }
 
@@ -34,19 +35,19 @@
       top: 0;
       width: 100%;
       background: rgba(15,15,30,0.95);
-      padding: 14px 0;
+      padding: 16px 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.8);
       z-index: 1000;
-      backdrop-filter: blur(6px);
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
+      font-weight: 600;
     }
 
     nav a {
       color: #00f7ff;
       text-decoration: none;
-      font-weight: 600;
+      font-size: 1.1em;
       transition: color 0.3s;
     }
 
@@ -55,12 +56,13 @@
     }
 
     header {
-      padding: 140px 20px 60px 20px;
-      background: linear-gradient(135deg, #101020, #181830);
+      padding: 180px 20px 80px 20px;
+      background-color: var(--bg-header);
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 20px;
     }
 
     header h1 {
@@ -71,23 +73,22 @@
     }
 
     header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      color: #bdbdbd;
-      max-width: 600px;
+      font-size: 1.3em;
+      color: var(--text-color);
+      max-width: 650px;
     }
 
     .btn {
       display: inline-block;
-      margin: 12px 8px;
-      padding: 14px 28px;
-      background: var(--btn-gradient);
+      padding: 14px 30px;
+      background: var(--btn-bg);
       color: white;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 12px;
       transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      font-size: 1.1em;
     }
 
     .btn:hover {
@@ -95,54 +96,49 @@
       box-shadow: var(--btn-hover-shadow);
     }
 
+    #theme-toggle {
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
     section {
-      padding: 60px 20px;
-      max-width: 950px;
+      padding: 80px 20px;
+      max-width: 900px;
       margin: auto;
       text-align: left;
+      line-height: 1.8em;
     }
 
     section h2 {
-      font-size: 2em;
+      font-size: 2.2em;
       margin-bottom: 25px;
       color: #00f7ff;
       text-shadow: 0 0 10px rgba(0,247,255,0.6);
     }
 
     section p, section li {
-      font-size: 1.1em;
+      font-size: 1.15em;
       color: var(--text-color);
     }
 
     section ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
+      margin-left: 25px;
+      margin-bottom: 30px;
     }
 
     section ul li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     footer {
-      background: #111122;
-      padding: 25px;
-      margin-top: 50px;
-      font-size: 0.9em;
+      background-color: var(--bg-header);
+      padding: 30px;
+      font-size: 0.95em;
       color: #aaa;
       border-top: 1px solid #222;
       text-align: center;
     }
 
-    #player-count {
-      font-size: 1.2em;
-      margin: 20px 0;
-      color: #00f7ff;
-      text-shadow: 0 0 8px rgba(0,247,255,0.6);
-    }
-
-    #theme-toggle {
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
@@ -158,13 +154,10 @@
   <!-- En-tête -->
   <header>
     <h1>NoctaMon</h1>
-    <p>Rejoins l’aventure Pokémon dans Minecraft avec tes amis !</p>
+    <p>Rejoins l’aventure Pokémon dans Minecraft avec tes amis ! Découvre des quêtes, arènes, factions et complète ton Pokédex !</p>
     <a class="btn" href="LIEN_DU_LAUNCHER" target="_blank">Télécharger le Launcher</a>
     <button id="theme-toggle" class="btn">🌙 Mode Clair/Sombre</button>
   </header>
-
-  <!-- Compteur joueurs -->
-  <p id="player-count">Chargement des joueurs...</p>
 
   <!-- Infos NoctaMon -->
   <section id="infos">
@@ -186,35 +179,18 @@
 
   <!-- Scripts -->
   <script>
-    // Compteur joueurs sur port 4000
-    async function updatePlayers() {
-      const countElement = document.getElementById("player-count");
-      try {
-        const response = await fetch("http://localhost:4000/status"); 
-        if (!response.ok) throw new Error("Erreur réseau");
-        const data = await response.json();
-        if (data && typeof data.players === "number" && typeof data.maxPlayers === "number") {
-          countElement.textContent = `👥 Joueurs connectés : ${data.players} / ${data.maxPlayers}`;
-        } else {
-          countElement.textContent = "⚠ Données serveur invalides";
-        }
-      } catch (err) {
-        console.error("Erreur récupération statut :", err);
-        countElement.textContent = "⚠ Impossible de récupérer le statut";
-      }
-    }
-    updatePlayers();
-    setInterval(updatePlayers, 10000);
-
-    // Mode clair/sombre
+    // Mode clair/sombre avec contraste plus marqué
     const toggle = document.getElementById("theme-toggle");
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("light");
+      toggle.textContent = document.body.classList.contains("light") ? "🌙 Mode Sombre" : "☀️ Mode Clair";
     });
   </script>
 
 </body>
 </html>
+
+
 
 
 
