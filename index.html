@@ -1,221 +1,196 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NoctaMon - Pixelmon</title>
-<style>
-:root {
-  --bg-color: #0a0a0a;
-  --bg-gradient: linear-gradient(135deg,#0a0a0a,#1e1e2f);
-  --text-color: #e0e0e0;
-  --accent-color: #00f7ff;
-  --accent-hover: #ff00c8;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoctaMon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
+      color: #e0e0e0;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
-  background: var(--bg-gradient);
-  color: var(--text-color);
-  text-align: center;
-  transition: background 0.5s, color 0.5s;
-}
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 15, 30, 0.95);
+      padding: 14px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
 
-.dark-theme {
-  --bg-color: #0a0a0a;
-  --bg-gradient: linear-gradient(135deg,#0a0a0a,#1e1e2f);
-  --text-color: #e0e0e0;
-  --accent-color: #00f7ff;
-  --accent-hover: #ff00c8;
-}
+    nav a {
+      color: #00f7ff;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-.light-theme {
-  --bg-color: #fefefe;
-  --bg-gradient: linear-gradient(135deg,#ffffff,#cfe0ff);
-  --text-color: #111111;
-  --accent-color: #0066ff;
-  --accent-hover: #ff3366;
-}
+    nav a:hover {
+      color: #ff00c8;
+    }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(15,15,30,0.95);
-  padding: 14px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-  z-index: 1000;
-  backdrop-filter: blur(6px);
-  text-align: center;
-}
+    header {
+      padding: 120px 20px 40px 20px;
+      background: linear-gradient(135deg, #101020, #181830);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
 
-nav a {
-  color: var(--accent-color);
-  text-decoration: none;
-  margin: 0 18px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #00f7ff;
+      text-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
+    }
 
-nav a:visited, nav a:active {
-  color: var(--accent-color);
-}
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #bdbdbd;
+    }
 
-nav a:hover {
-  color: var(--accent-hover);
-}
+    .btn {
+      display: inline-block;
+      margin: 12px 8px;
+      padding: 14px 28px;
+      background: linear-gradient(45deg, #00f7ff, #ff00c8);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
 
-header {
-  padding: 140px 20px 60px 20px;
-  background: linear-gradient(135deg,#101020,#181830);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 3em;
-  color: var(--accent-color);
-  text-shadow: 0 0 12px rgba(0,247,255,0.8);
-}
+    section {
+      padding: 60px 20px;
+      max-width: 950px;
+      margin: auto;
+      text-align: left;
+    }
 
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-  color: #bdbdbd;
-}
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 25px;
+      color: #00f7ff;
+      text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
+    }
 
-.btn {
-  display: inline-block;
-  margin: 15px 8px 0 8px;
-  padding: 14px 28px;
-  background: linear-gradient(45deg,#00f7ff,#ff00c8);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
-}
+    section p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      line-height: 1.6em;
+      color: #ccc;
+    }
 
-.light-theme .btn {
-  background: linear-gradient(45deg,#0066ff,#ff3366);
-}
+    section ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(255,0,200,0.8),0 0 20px rgba(0,247,255,0.8);
-}
+    section ul li {
+      margin-bottom: 10px;
+    }
 
-section {
-  padding: 60px 20px;
-  max-width: 950px;
-  margin: auto;
-  text-align: center;
-}
+    footer {
+      background: #111122;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+      border-top: 1px solid #222;
+      text-align: center;
+    }
 
-section h2 {
-  font-size: 2em;
-  margin-bottom: 25px;
-  color: var(--accent-color);
-  text-shadow: 0 0 10px rgba(0,247,255,0.6);
-}
-
-.coin-pack, .event-card {
-  display: inline-block;
-  margin: 15px;
-  padding: 20px;
-  background: rgba(20,20,40,0.8);
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  width: 200px;
-}
-
-.event-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-footer {
-  background: #111122;
-  padding: 25px;
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #aaa;
-  border-top: 1px solid #222;
-  text-align: center;
-}
-
-#player-count {
-  font-weight: bold;
-  color: var(--accent-hover);
-}
-
-@media screen and (max-width: 600px){
-  .coin-pack, .event-card {
-    width: 90%;
-  }
-}
-</style>
+    /* Compteur joueurs */
+    #player-count {
+      font-size: 1.2em;
+      margin: 20px 0;
+      color: #00f7ff;
+      text-shadow: 0 0 8px rgba(0,247,255,0.6);
+    }
+  </style>
 </head>
-<body class="dark-theme">
+<body>
 
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="wiki.html">Wiki</a>
-  <a href="reseaux.html">Réseaux</a>
-  <a href="boutique.html">Boutique</a>
-  <button class="btn" onclick="toggleTheme()">Mode clair/sombre</button>
-</nav>
+  <!-- Menu navigation -->
+  <nav>
+    <a href="#infos">Infos NoctaMon</a>
+    <a href="boutique.html">Boutique</a>
+    <a href="wiki.html">Wiki</a>
+    <a href="reseaux.html">Réseaux</a>
+  </nav>
 
-<header>
-<h1>NoctaMon</h1>
-<p>Rejoins l’aventure Pokémon dans Minecraft avec tes amis !</p>
-<a class="btn" href="#">Télécharger le Launcher</a>
-<p>Joueurs en ligne : <span id="player-count">12</span></p>
-</header>
+  <!-- En-tête -->
+  <header>
+    <h1>NoctaMon</h1>
+    <p>Rejoins l’aventure Pokémon dans Minecraft avec tes amis !</p>
+    <a class="btn" href="#">IP: noctamon.minesr.com</a>
+    <br>
+    <a class="btn" href="LIEN_DU_LAUNCHER" target="_blank">Télécharger le Launcher</a>
+  </header>
 
-<section>
-<h2>📰 Événements à venir</h2>
-<div class="event-card">
-<img src="https://via.placeholder.com/200x120.png?text=Tournoi+Arène" alt="Tournoi">
-<p><strong>Tournoi Arène</strong><br>10 Septembre 2025</p>
-</div>
+  <!-- Compteur de joueurs -->
+  <p id="player-count">Chargement des joueurs...</p>
 
-<div class="event-card">
-<img src="https://via.placeholder.com/200x120.png?text=Nouvelle+Arène" alt="Nouvelle Arène">
-<p><strong>Nouvelle Arène</strong><br>15 Septembre 2025</p>
-</div>
+  <!-- Infos NoctaMon -->
+  <section id="infos">
+    <h2>⚡ Infos NoctaMon</h2>
+    <p>Rejoins <strong>NoctaMon</strong>, un univers Pokémon unique où tu peux t’amuser avec tes amis !</p>
+    <ul>
+      <li><strong>Système de factions :</strong> forme ton équipe, défends ton territoire et montre ta stratégie.</li>
+      <li><strong>Quêtes et aventures :</strong> accomplis des missions pour progresser et gagner des récompenses.</li>
+      <li><strong>Arènes et récompenses :</strong> défie d’autres joueurs et récupère des prix lorsque tu gagnes.</li>
+      <li><strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux grâce à un système de clés et découvre des bonus exclusifs.</li>
+      <li><strong>Complète ton Pokédex :</strong> capture, collectionne et entraîne tes Pokémon pour devenir un champion !</li>
+    </ul>
+  </section>
 
-<div class="event-card">
-<img src="https://via.placeholder.com/200x120.png?text=Mise+à+jour+Pixelmon" alt="MAJ Pixelmon">
-<p><strong>Mise à jour Pixelmon</strong><br>20 Septembre 2025</p>
-</div>
-</section>
+  <!-- Footer -->
+  <footer>
+    <p>Rejoins notre communauté :</p>
+    <a class="btn" href="https://discord.gg/2REwp9FT85" target="_blank">Discord</a>
+    <p>© 2025 NoctaMon | Fait avec ❤️ par l’équipe</p>
+  </footer>
 
-<footer>
-<p>© 2025 NoctaMon | Fait avec ❤️ par l’équipe</p>
-</footer>
+  <!-- Script compteur joueurs -->
+  <script>
+    async function updatePlayers() {
+      try {
+        const response = await fetch("http://localhost:4000/status");
+        const data = await response.json();
+        const countElement = document.getElementById("player-count");
 
-<script>
-function toggleTheme(){
-  document.body.classList.toggle('dark-theme');
-  document.body.classList.toggle('light-theme');
-}
+        if(data.online) {
+          countElement.textContent = `👥 Joueurs connectés : ${data.players} / ${data.maxPlayers}`;
+        } else {
+          countElement.textContent = "❌ Serveur hors ligne";
+        }
+      } catch (error) {
+        document.getElementById("player-count").textContent = "⚠ Impossible de récupérer le statut";
+      }
+    }
 
-// Compteur joueurs simulé (à remplacer par l'API du serveur)
-function updatePlayerCount(){
-  const countSpan = document.getElementById('player-count');
-  countSpan.textContent = Math.floor(Math.random()*50)+1;
-}
-
-setInterval(updatePlayerCount,5000);
-updatePlayerCount();
-</script>
+    updatePlayers();
+    setInterval(updatePlayers, 10000); // mise à jour toutes les 10s
+  </script>
 
 </body>
 </html>
+
 
 
 
