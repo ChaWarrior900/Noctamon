@@ -31,7 +31,6 @@
       transition: all 0.3s ease;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 0;
@@ -41,12 +40,14 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.8);
       z-index: 1000;
       backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
 
     nav a {
       color: #00f7ff;
       text-decoration: none;
-      margin: 0 18px;
       font-weight: 600;
       transition: color 0.3s;
     }
@@ -56,10 +57,13 @@
     }
 
     header {
-      padding: 120px 20px 40px 20px;
+      padding: 140px 20px 60px 20px;
       background: linear-gradient(135deg, #101020, #181830);
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     header h1 {
@@ -73,6 +77,7 @@
       font-size: 1.2em;
       margin-top: 10px;
       color: #bdbdbd;
+      max-width: 600px;
     }
 
     .btn {
@@ -107,10 +112,8 @@
       text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
     }
 
-    section p {
+    section p, section li {
       font-size: 1.1em;
-      margin-bottom: 20px;
-      line-height: 1.6em;
       color: var(--text-color);
     }
 
@@ -133,7 +136,6 @@
       text-align: center;
     }
 
-    /* Compteur joueurs */
     #player-count {
       font-size: 1.2em;
       margin: 20px 0;
@@ -141,18 +143,14 @@
       text-shadow: 0 0 8px rgba(0,247,255,0.6);
     }
 
-    /* Bouton mode sombre/claire */
     #theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 0.9em;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Menu navigation -->
+  <!-- Navigation -->
   <nav>
     <a href="#infos">Infos NoctaMon</a>
     <a href="boutique.html">Boutique</a>
@@ -164,51 +162,48 @@
   <header>
     <h1>NoctaMon</h1>
     <p>Rejoins l’aventure Pokémon dans Minecraft avec tes amis !</p>
-    <a class="btn" href="#">IP: noctamon.minesr.com</a>
-    <br>
     <a class="btn" href="LIEN_DU_LAUNCHER" target="_blank">Télécharger le Launcher</a>
-    <button id="theme-toggle" class="btn">🌙 Mode Sombre/Clair</button>
+    <button id="theme-toggle" class="btn">🌙 Mode Clair/Sombre</button>
   </header>
 
-  <!-- Compteur de joueurs -->
+  <!-- Compteur joueurs -->
   <p id="player-count">Chargement des joueurs...</p>
 
   <!-- Infos NoctaMon -->
   <section id="infos">
     <h2>⚡ Infos NoctaMon</h2>
-    <p>Rejoins <strong>NoctaMon</strong>, un univers Pokémon unique où tu peux t’amuser avec tes amis !</p>
+    <p>Explore un univers Pokémon unique et amusant avec tes amis !</p>
     <ul>
-      <li><strong>Système de factions :</strong> forme ton équipe, défends ton territoire et montre ta stratégie.</li>
-      <li><strong>Quêtes et aventures :</strong> accomplis des missions pour progresser et gagner des récompenses.</li>
-      <li><strong>Arènes et récompenses :</strong> défie d’autres joueurs et récupère des prix lorsque tu gagnes.</li>
-      <li><strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux grâce à un système de clés et découvre des bonus exclusifs.</li>
-      <li><strong>Complète ton Pokédex :</strong> capture, collectionne et entraîne tes Pokémon pour devenir un champion !</li>
+      <li><strong>Système de factions :</strong> forme ton équipe et défends ton territoire.</li>
+      <li><strong>Quêtes et aventures :</strong> accomplis des missions et gagne des récompenses.</li>
+      <li><strong>Arènes :</strong> défie d’autres joueurs et récupère des prix.</li>
+      <li><strong>Boîtes mystères :</strong> ouvre des coffres spéciaux avec des clés et découvre des bonus.</li>
+      <li><strong>Complète ton Pokédex :</strong> capture, collectionne et entraîne tes Pokémon.</li>
     </ul>
   </section>
 
-  <!-- Footer sans Discord -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 NoctaMon | Fait avec ❤️ par l’équipe</p>
   </footer>
 
-  <!-- Script compteur joueurs et mode clair/sombre -->
+  <!-- Scripts -->
   <script>
+    // Compteur joueurs
     async function updatePlayers() {
       try {
         const response = await fetch("http://localhost:4000/status");
         const data = await response.json();
         const countElement = document.getElementById("player-count");
-
         if(data.online) {
           countElement.textContent = `👥 Joueurs connectés : ${data.players} / ${data.maxPlayers}`;
         } else {
           countElement.textContent = "❌ Serveur hors ligne";
         }
-      } catch (error) {
+      } catch {
         document.getElementById("player-count").textContent = "⚠ Impossible de récupérer le statut";
       }
     }
-
     updatePlayers();
     setInterval(updatePlayers, 10000);
 
@@ -221,9 +216,6 @@
 
 </body>
 </html>
-
-
-
 
 
 
