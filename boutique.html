@@ -1,188 +1,191 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boutique NoctaMon</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
-      color: #e0e0e0;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique NoctaMon</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg,#0a0a0a,#1e1e2f);
+  color: #e0e0e0;
+  text-align: center;
+  scroll-behavior: smooth;
+}
 
-   <!-- Navigation -->
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="boutique.html">Boutique</a>
-    <a href="wiki.html">Wiki</a>
-    <a href="reseaux.html">Réseaux</a>
-  </nav>
-    }
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15,15,30,0.95);
+  padding: 14px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
 
-    nav a {
-      color: #00f7ff;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+nav a {
+  color: #00f7ff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
 
-    nav a:hover {
-      color: #ff00c8;
-    }
+nav a:hover {
+  color: #ff00c8;
+}
 
-    header {
-      padding: 100px 20px 40px 20px;
-      background: linear-gradient(135deg, #101020, #181830);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
+header {
+  padding: 120px 20px 40px 20px;
+  background: linear-gradient(135deg,#101020,#181830);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #00f7ff;
-      text-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
-    }
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  color: #00f7ff;
+  text-shadow: 0 0 12px rgba(0,247,255,0.8);
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: left;
-    }
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #bdbdbd;
+}
 
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #00f7ff;
-      text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
-    }
+.btn {
+  display: inline-block;
+  margin: 15px 8px 0 8px;
+  padding: 14px 28px;
+  background: linear-gradient(45deg,#00f7ff,#ff00c8);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
 
-    section p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-      line-height: 1.6em;
-      color: #ccc;
-    }
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255,0,200,0.8),0 0 20px rgba(0,247,255,0.8);
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 12px 25px;
-      background: linear-gradient(45deg, #00f7ff, #ff00c8);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    }
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
-    }
+section h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #00f7ff;
+  text-shadow: 0 0 10px rgba(0,247,255,0.6);
+}
 
-    footer {
-      background: #111122;
-      padding: 25px;
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #aaa;
-      border-top: 1px solid #222;
-      text-align: center;
-    }
+section p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #ccc;
+}
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+footer {
+  background: #111122;
+  padding: 25px;
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #aaa;
+  border-top: 1px solid #222;
+  text-align: center;
+}
 
-    .product {
-      background: #1a1a2f;
-      border-radius: 12px;
-      padding: 20px;
-      width: 220px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
-    }
+.coin-pack {
+  display: inline-block;
+  margin: 15px;
+  padding: 20px;
+  background: rgba(20,20,40,0.8);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  width: 150px;
+}
 
-    .product:hover {
-      transform: scale(1.05);
-    }
+.coin-pack h3 {
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
 
-    .product h3 {
-      color: #00f7ff;
-      margin-bottom: 10px;
-    }
+.coin-pack p {
+  margin: 5px 0;
+}
 
-    .product p {
-      margin-bottom: 15px;
-      color: #ccc;
-    }
-  </style>
+.coin-pack a {
+  display: block;
+  margin-top: 10px;
+}
+</style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="wiki.html">Wiki</a>
-    <a href="boutique.html">Boutique</a>
-  </nav>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="wiki.html">Wiki</a>
+  <a href="reseaux.html">Réseaux</a>
+  <a href="boutique.html">Boutique</a>
+</nav>
 
-  <header>
-    <h1>🛒 Boutique NoctaMon</h1>
-    <p>Achète des NoctaCoins et débloque des avantages uniques sur le serveur !</p>
-  </header>
+<header>
+<h1>Boutique NoctaMon</h1>
+<p>Achète des NoctaCoins et profite d’avantages exclusifs en jeu !</p>
+</header>
 
-  <section>
-    <div class="products">
-      <div class="product">
-        <h3>Pack 50 NoctaCoins</h3>
-        <p>Idéal pour débuter.</p>
-        <p>Prix : 4 € </p>
-        <a class="btn" href="https://paypal.me/Noctamon/4" target="_blank">Acheter</a>
-      </div>
-      <div class="product">
-        <h3>Pack 100 NoctaCoins</h3>
-        <p>Pour profiter encore plus du serveur.</p>
-        <p>Prix : 7 € </p>
-        <a class="btn" href="https://paypal.me/Noctamon/7" target="_blank">Acheter</a>
-      </div>
-      <div class="product">
-        <h3>Pack 150 NoctaCoins</h3>
-        <p>Plus de ressources et avantages.</p>
-        <p>Prix : 10 € </p>
-        <a class="btn" href="https://paypal.me/Noctamon/10" target="_blank">Acheter</a>
-      </div>
-      <div class="product">
-        <h3>Pack 200 NoctaCoins</h3>
-        <p>Idéal pour les joueurs réguliers.</p>
-        <p>Prix : 13 € </p>
-        <a class="btn" href="https://paypal.me/Noctamon/13" target="_blank">Acheter</a>
-      </div>
-      <div class="product">
-        <h3>Pack 1000 NoctaCoins</h3>
-        <p>Pour les vrais champions !</p>
-        <p>Prix : 50 € </p>
-        <a class="btn" href="https://paypal.me/Noctamon/50" target="_blank">Acheter</a>
-      </div>
-    </div>
-  </section>
+<section>
+<h2>💰 Packs de NoctaCoins</h2>
 
-  <footer>
-    <p>© 2025 NoctaMon Boutique | Fait avec ❤️ par l’équipe</p>
-  </footer>
+<div class="coin-pack">
+<h3>50 NoctaCoins</h3>
+<p>Prix : 4€</p>
+<a class="btn" href="https://www.paypal.com/paypalme/Noctamon" target="_blank">Acheter</a>
+</div>
+
+<div class="coin-pack">
+<h3>100 NoctaCoins</h3>
+<p>Prix : 7€</p>
+<a class="btn" href="https://www.paypal.com/paypalme/Noctamon" target="_blank">Acheter</a>
+</div>
+
+<div class="coin-pack">
+<h3>150 NoctaCoins</h3>
+<p>Prix : 10€</p>
+<a class="btn" href="https://www.paypal.com/paypalme/Noctamon" target="_blank">Acheter</a>
+</div>
+
+<div class="coin-pack">
+<h3>200 NoctaCoins</h3>
+<p>Prix : 13€</p>
+<a class="btn" href="https://www.paypal.com/paypalme/Noctamon" target="_blank">Acheter</a>
+</div>
+
+<div class="coin-pack">
+<h3>1000 NoctaCoins</h3>
+<p>Prix : 50€</p>
+<a class="btn" href="https://www.paypal.com/paypalme/Noctamon" target="_blank">Acheter</a>
+</div>
+
+</section>
+
+<footer>
+<p>© 2025 NoctaMon | Fait avec ❤️ par l’équipe</p>
+</footer>
 
 </body>
 </html>
-
 
 
 
