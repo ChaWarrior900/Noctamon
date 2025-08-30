@@ -190,7 +190,7 @@
     async function updatePlayers() {
       const countElement = document.getElementById("player-count");
       try {
-        const response = await fetch("http://localhost:3000/status"); // Ajuste le port si nécessaire
+        const response = await fetch("http://localhost:4000/status"); // Ajuste le port si nécessaire
         if (!response.ok) throw new Error("Erreur réseau");
         const data = await response.json();
         if (data && typeof data.players === "number" && typeof data.maxPlayers === "number") {
@@ -215,6 +215,7 @@
 
 </body>
 </html>
+
 
 
 
