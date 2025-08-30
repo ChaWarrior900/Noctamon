@@ -6,6 +6,7 @@
   <title>NoctaMon</title>
   <style>
     :root {
+      /* Thème sombre par défaut */
       --bg-color: #0a0a0a;
       --bg-header: #101020;
       --text-color: #e0e0e0;
@@ -14,9 +15,9 @@
     }
 
     body.light {
-      --bg-color: #f0f0f0;
-      --bg-header: #ffffff;
-      --text-color: #111;
+      --bg-color: #ffffff;
+      --bg-header: #f2f2f2;
+      --text-color: #111111;
       --btn-bg: linear-gradient(45deg, #00c8ff, #ff00c8);
       --btn-hover-shadow: 0 0 20px rgba(255,0,200,0.5), 0 0 20px rgba(0,200,255,0.5);
     }
@@ -134,7 +135,7 @@
       background-color: var(--bg-header);
       padding: 30px;
       font-size: 0.95em;
-      color: #aaa;
+      color: var(--text-color);
       border-top: 1px solid #222;
       text-align: center;
     }
@@ -179,7 +180,6 @@
 
   <!-- Scripts -->
   <script>
-    // Mode clair/sombre avec contraste plus marqué
     const toggle = document.getElementById("theme-toggle");
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("light");
@@ -189,17 +189,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
