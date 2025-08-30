@@ -10,7 +10,6 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
       color: #e0e0e0;
-      text-align: center;
       scroll-behavior: smooth;
     }
 
@@ -23,6 +22,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.8);
       z-index: 1000;
       backdrop-filter: blur(6px);
+      text-align: center;
     }
 
     nav a {
@@ -41,13 +41,14 @@
       padding: 100px 20px 40px 20px;
       background: linear-gradient(135deg, #101020, #181830);
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      text-align: center;
     }
 
     header h1 {
       margin: 0;
       font-size: 3em;
       color: #00f7ff;
-      text-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
+      text-shadow: 0 0 12px rgba(0,247,255,0.8);
     }
 
     header p {
@@ -60,14 +61,14 @@
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
-      text-align: left;
     }
 
     section h2 {
       font-size: 2em;
       margin-bottom: 20px;
       color: #00f7ff;
-      text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
+      text-shadow: 0 0 10px rgba(0,247,255,0.6);
+      text-align: center;
     }
 
     section p {
@@ -75,15 +76,28 @@
       margin-bottom: 15px;
       line-height: 1.6em;
       color: #ccc;
+      text-align: center;
     }
 
-    section ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
     }
 
-    section ul li {
-      margin-bottom: 10px;
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      color: #e0e0e0;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(0,247,255,0.2);
+    }
+
+    td {
+      background-color: rgba(0,0,0,0.3);
     }
 
     .btn {
@@ -127,13 +141,13 @@
   <!-- Header -->
   <header>
     <h1>Wiki NoctaMon</h1>
-    <p>Toutes les informations pour progresser sur NoctaMon et Pixelmon</p>
+    <p>Tout ce qu’il faut savoir pour jouer sur NoctaMon et maîtriser Pixelmon</p>
   </header>
 
   <!-- Introduction -->
   <section>
     <h2>📖 Introduction</h2>
-    <p>Bienvenue sur le Wiki officiel de NoctaMon. Ici, tu trouveras tout ce qu’il faut savoir pour bien débuter et progresser dans l’univers Pixelmon sur notre serveur.</p>
+    <p>Bienvenue sur le Wiki officiel de NoctaMon. Ici tu trouveras toutes les informations pour débuter sur le serveur et comprendre les bases de Pixelmon.</p>
   </section>
 
   <!-- Comment débuter -->
@@ -141,64 +155,107 @@
     <h2>⚡ Comment débuter</h2>
     <p>Pour jouer sur NoctaMon :</p>
     <ul>
-      <li>Installe le <strong>Launcher NoctaMon</strong> depuis le bouton de téléchargement sur la page d’accueil.</li>
-      <li>Connecte-toi avec ton compte Microsoft.</li>
-      <li>La version Minecraft est déjà sélectionnée, clique simplement sur <strong>Jouer</strong>.</li>
+      <li>Installe le <strong>Launcher NoctaMon</strong> depuis l’index.</li>
+      <li>Connecte ton compte Microsoft.</li>
+      <li>La version est déjà sélectionnée, clique sur <strong>Jouer</strong>.</li>
     </ul>
   </section>
 
-  <!-- Pixelmon – Bases -->
+  <!-- Pixelmon Bases & Crafts -->
   <section>
-    <h2>🎮 Pixelmon - Bases</h2>
-    <p>Pixelmon ajoute des Pokémon à Minecraft avec un système complet de capture, combat et évolution :</p>
-    <ul>
-      <li><strong>Capturer des Pokémon :</strong> utilise des Pokéballs pour attraper les Pokémon sauvages.</li>
-      <li><strong>Types :</strong> chaque Pokémon a un type (Feu, Eau, Plante...) avec ses forces et faiblesses.</li>
-      <li><strong>Évolution :</strong> certains Pokémon évoluent à un certain niveau ou avec des objets spécifiques.</li>
-      <li><strong>Objets de base :</strong> Pokéballs, Potions, Baies – tu peux les crafter ou les acheter.</li>
-      <li><strong>Crafting :</strong> consulte les recettes de base pour créer les Pokéballs et potions nécessaires à ton aventure.</li>
-    </ul>
+    <h2>🎮 Pixelmon - Bases et Crafts</h2>
+    <p>Voici les principaux crafts pour bien débuter :</p>
+    <table>
+      <tr>
+        <th>Objet</th>
+        <th>Craft</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>Pokéball</td>
+        <td>1 Boule + 1 Poudre Rouge</td>
+        <td>Capturer un Pokémon de base</td>
+      </tr>
+      <tr>
+        <td>Great Ball</td>
+        <td>1 Pokéball + 1 Étoile + 1 Poudre Rouge</td>
+        <td>Meilleure chance de capture</td>
+      </tr>
+      <tr>
+        <td>Ultra Ball</td>
+        <td>1 Great Ball + 1 Étoile + 1 Poudre Rouge</td>
+        <td>Haute chance de capture</td>
+      </tr>
+      <tr>
+        <td>Potion</td>
+        <td>1 Bouteille d’eau + 1 Herbe</td>
+        <td>Soigner 20 PV</td>
+      </tr>
+      <tr>
+        <td>Super Potion</td>
+        <td>2 Potions + 1 Baie</td>
+        <td>Soigner 50 PV</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Starters -->
+  <section>
+    <h2>🌱 Starters</h2>
+    <p>Choisis ton Pokémon de départ sur NoctaMon :</p>
+    <table>
+      <tr>
+        <th>Pokémon</th>
+        <th>Type</th>
+        <th>Attaque de base</th>
+        <th>Évolution</th>
+      </tr>
+      <tr>
+        <td>Bulbizarre</td>
+        <td>Plante/Poison</td>
+        <td>Charge, Fouet Lianes</td>
+        <td>Herbizarre → Florizarre</td>
+      </tr>
+      <tr>
+        <td>Salamèche</td>
+        <td>Feu</td>
+        <td>Griffe, Flammèche</td>
+        <td>Reptincel → Dracaufeu</td>
+      </tr>
+      <tr>
+        <td>Carapuce</td>
+        <td>Eau</td>
+        <td>Pistolet à O, Charge</td>
+        <td>Carabaffe → Tortank</td>
+      </tr>
+    </table>
   </section>
 
   <!-- Gameplay NoctaMon -->
   <section>
     <h2>🌟 Gameplay sur NoctaMon</h2>
     <ul>
-      <li><strong>Quêtes et aventures :</strong> accomplis des missions pour obtenir des récompenses et de l’expérience.</li>
-      <li><strong>Arènes :</strong> défie d’autres joueurs pour gagner des prix et montrer ta puissance.</li>
-      <li><strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux avec des clés pour obtenir des bonus uniques.</li>
-      <li><strong>Complète ton Pokédex :</strong> capture tous les Pokémon disponibles pour devenir un vrai champion.</li>
+      <li>🎯 <strong>Quêtes :</strong> accomplis des missions pour progresser et gagner des récompenses.</li>
+      <li>🏆 <strong>Arènes :</strong> défie d’autres joueurs et récupère des prix.</li>
+      <li>🎁 <strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux pour obtenir des bonus.</li>
+      <li>📖 <strong>Pokédex :</strong> capture tous les Pokémon pour devenir un champion.</li>
     </ul>
   </section>
 
   <!-- NoctaCoins -->
   <section>
     <h2>💰 NoctaCoins</h2>
-    <p>Les NoctaCoins sont la monnaie virtuelle du serveur :</p>
+    <p>Les NoctaCoins sont la monnaie virtuelle :</p>
     <ul>
-      <li>Tu peux les acheter via notre boutique pour débloquer des avantages en jeu.</li>
-      <li>Ils permettent de faciliter ta progression et obtenir des objets exclusifs.</li>
+      <li>Achète-les via la boutique pour débloquer des avantages en jeu.</li>
+      <li>Permettent d’obtenir des objets exclusifs et faciliter ta progression.</li>
     </ul>
   </section>
 
   <!-- FAQ / Astuces -->
   <section>
-    <h2>❓ FAQ & Astuces</h2>
-    <ul>
-      <li>Pense à entraîner tes Pokémon régulièrement pour réussir les arènes.</li>
-      <li>Utilise le type avantageux pour chaque combat pour maximiser tes chances.</li>
-      <li>Explore le serveur pour trouver des coffres, Pokémon rares et missions cachées.</li>
-      <li>Ne néglige pas les quêtes, elles sont très utiles pour progresser vite.</li>
-    </ul>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 NoctaMon Wiki | Fait avec ❤️ par l’équipe</p>
-  </footer>
 
-</body>
-</html>
 
 
 
