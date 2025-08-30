@@ -11,6 +11,7 @@
       background: linear-gradient(135deg, #0a0a0a, #1e1e2f);
       color: #e0e0e0;
       text-align: center;
+      scroll-behavior: smooth;
     }
 
     nav {
@@ -44,9 +45,15 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 3em;
       color: #00f7ff;
       text-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #bdbdbd;
     }
 
     section {
@@ -65,7 +72,7 @@
 
     section p {
       font-size: 1.1em;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       line-height: 1.6em;
       color: #ccc;
     }
@@ -77,6 +84,23 @@
 
     section ul li {
       margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #00f7ff, #ff00c8);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255,0,200,0.8), 0 0 20px rgba(0,247,255,0.8);
     }
 
     footer {
@@ -92,41 +116,80 @@
 </head>
 <body>
 
-  <!-- Menu navigation -->
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Accueil</a>
+    <a href="boutique.html">Boutique</a>
     <a href="wiki.html">Wiki</a>
+    <a href="reseaux.html">Réseaux</a>
   </nav>
 
-  <!-- En-tête -->
+  <!-- Header -->
   <header>
     <h1>Wiki NoctaMon</h1>
-    <p>Toutes les infos essentielles pour progresser dans l’aventure</p>
+    <p>Toutes les informations pour progresser sur NoctaMon et Pixelmon</p>
   </header>
 
-  <!-- Contenu du wiki -->
+  <!-- Introduction -->
   <section>
     <h2>📖 Introduction</h2>
-    <p>Bienvenue sur le Wiki officiel de NoctaMon. Ici, tu trouveras toutes les informations nécessaires pour comprendre le serveur, ses mécaniques, et comment progresser efficacement.</p>
+    <p>Bienvenue sur le Wiki officiel de NoctaMon. Ici, tu trouveras tout ce qu’il faut savoir pour bien débuter et progresser dans l’univers Pixelmon sur notre serveur.</p>
+  </section>
 
-    <h2>⚡ Débuter sur NoctaMon</h2>
-    <p>Pour rejoindre le serveur :</p>
+  <!-- Comment débuter -->
+  <section>
+    <h2>⚡ Comment débuter</h2>
+    <p>Pour jouer sur NoctaMon :</p>
     <ul>
-      <li>Télécharge et installe le <strong>Launcher NoctaMon</strong>.</li>
-      <li>Connecte-toi avec ton <strong>compte Microsoft</strong> dans le launcher.</li>
-      <li>Clique sur <strong>Jouer</strong> et profite de l’aventure Pokémon avec tes amis !</li>
+      <li>Installe le <strong>Launcher NoctaMon</strong> depuis le bouton de téléchargement sur la page d’accueil.</li>
+      <li>Connecte-toi avec ton compte Microsoft.</li>
+      <li>La version Minecraft est déjà sélectionnée, clique simplement sur <strong>Jouer</strong>.</li>
     </ul>
+  </section>
 
-    <h2>🎮 Gameplay</h2>
-    <p>Capture des Pokémon, combats des dresseurs et explore un monde rempli d’aventures !</p>
+  <!-- Pixelmon – Bases -->
+  <section>
+    <h2>🎮 Pixelmon - Bases</h2>
+    <p>Pixelmon ajoute des Pokémon à Minecraft avec un système complet de capture, combat et évolution :</p>
     <ul>
-      <li>Accomplis des <strong>quêtes</strong> pour gagner des récompenses et progresser dans l’aventure.</li>
-      <li>Défie d’autres joueurs dans les <strong>arènes</strong> pour remporter des prix et montrer tes talents.</li>
+      <li><strong>Capturer des Pokémon :</strong> utilise des Pokéballs pour attraper les Pokémon sauvages.</li>
+      <li><strong>Types :</strong> chaque Pokémon a un type (Feu, Eau, Plante...) avec ses forces et faiblesses.</li>
+      <li><strong>Évolution :</strong> certains Pokémon évoluent à un certain niveau ou avec des objets spécifiques.</li>
+      <li><strong>Objets de base :</strong> Pokéballs, Potions, Baies – tu peux les crafter ou les acheter.</li>
+      <li><strong>Crafting :</strong> consulte les recettes de base pour créer les Pokéballs et potions nécessaires à ton aventure.</li>
     </ul>
-    <p>Des événements réguliers sont organisés pour la communauté.</p>
+  </section>
 
+  <!-- Gameplay NoctaMon -->
+  <section>
+    <h2>🌟 Gameplay sur NoctaMon</h2>
+    <ul>
+      <li><strong>Quêtes et aventures :</strong> accomplis des missions pour obtenir des récompenses et de l’expérience.</li>
+      <li><strong>Arènes :</strong> défie d’autres joueurs pour gagner des prix et montrer ta puissance.</li>
+      <li><strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux avec des clés pour obtenir des bonus uniques.</li>
+      <li><strong>Complète ton Pokédex :</strong> capture tous les Pokémon disponibles pour devenir un vrai champion.</li>
+    </ul>
+  </section>
+
+  <!-- NoctaCoins -->
+  <section>
     <h2>💰 NoctaCoins</h2>
-    <p>Les <strong>NoctaCoins</strong> sont la monnaie virtuelle du serveur. Tu peux en acheter dans la boutique pour débloquer des bonus en jeu.</p>
+    <p>Les NoctaCoins sont la monnaie virtuelle du serveur :</p>
+    <ul>
+      <li>Tu peux les acheter via notre boutique pour débloquer des avantages en jeu.</li>
+      <li>Ils permettent de faciliter ta progression et obtenir des objets exclusifs.</li>
+    </ul>
+  </section>
+
+  <!-- FAQ / Astuces -->
+  <section>
+    <h2>❓ FAQ & Astuces</h2>
+    <ul>
+      <li>Pense à entraîner tes Pokémon régulièrement pour réussir les arènes.</li>
+      <li>Utilise le type avantageux pour chaque combat pour maximiser tes chances.</li>
+      <li>Explore le serveur pour trouver des coffres, Pokémon rares et missions cachées.</li>
+      <li>Ne néglige pas les quêtes, elles sont très utiles pour progresser vite.</li>
+    </ul>
   </section>
 
   <!-- Footer -->
@@ -136,6 +199,7 @@
 
 </body>
 </html>
+
 
 
 
