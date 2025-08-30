@@ -59,13 +59,13 @@
 
     .btn {
       display: inline-block;
-      margin: 15px 8px 0 8px;
+      margin: 15px 10px;
       padding: 14px 28px;
       background: linear-gradient(45deg, #00f7ff, #ff00c8);
       color: white;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 12px;
       transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 0 15px rgba(0,0,0,0.6);
     }
@@ -77,32 +77,34 @@
 
     section {
       padding: 60px 20px;
-      max-width: 950px;
+      max-width: 900px;
       margin: auto;
-      text-align: left;
+      text-align: center; /* ✅ centré */
     }
 
     section h2 {
-      font-size: 2em;
+      font-size: 2.2em;
       margin-bottom: 25px;
       color: #00f7ff;
       text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
     }
 
     section p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       margin-bottom: 20px;
       line-height: 1.6em;
       color: #ccc;
     }
 
     section ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
+      list-style: none;
+      padding: 0;
     }
 
     section ul li {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      color: #ddd;
     }
 
     footer {
@@ -130,21 +132,22 @@
   <header>
     <h1>NoctaMon</h1>
     <p>Rejoins l’aventure Pokémon dans Minecraft avec tes amis !</p>
-    <a class="btn" href="#">IP: noctamon.minesr.com</a>
-    <br>
-    <a class="btn" href="LIEN_DU_LAUNCHER" target="_blank">Télécharger le Launcher</a>
+    <div>
+      <a class="btn" href="#">IP: noctamon.minesr.com</a>
+      <a class="btn" href="LIEN_DU_LAUNCHER" target="_blank">Télécharger le Launcher</a>
+    </div>
   </header>
 
   <!-- Infos NoctaMon -->
   <section id="infos">
     <h2>⚡ Infos NoctaMon</h2>
-    <p>Rejoins <strong>NoctaMon</strong>, un univers Pokémon unique où tu peux t’amuser avec tes amis !</p>
+    <p><strong>NoctaMon</strong> est un univers Pokémon unique où tu peux t’amuser avec tes amis !</p>
     <ul>
-      <li><strong>Système de factions :</strong> forme ton équipe, défends ton territoire et montre ta stratégie.</li>
-      <li><strong>Quêtes et aventures :</strong> accomplis des missions pour progresser et gagner des récompenses.</li>
-      <li><strong>Arènes et récompenses :</strong> défie d’autres joueurs et récupère des prix lorsque tu gagnes.</li>
-      <li><strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux grâce à un système de clés et découvre des bonus exclusifs.</li>
-      <li><strong>Complète ton Pokédex :</strong> capture, collectionne et entraîne tes Pokémon pour devenir un champion !</li>
+      <li>⚔️ <strong>Système de factions :</strong> forme ton équipe, défends ton territoire et montre ta stratégie.</li>
+      <li>📜 <strong>Quêtes et aventures :</strong> accomplis des missions pour progresser et gagner des récompenses.</li>
+      <li>🏆 <strong>Arènes et récompenses :</strong> défie d’autres joueurs et récupère des prix lorsque tu gagnes.</li>
+      <li>🎁 <strong>Boîtes mystères et clés :</strong> ouvre des coffres spéciaux et découvre des bonus exclusifs.</li>
+      <li>📖 <strong>Complète ton Pokédex :</strong> capture, collectionne et entraîne tes Pokémon pour devenir un champion !</li>
     </ul>
   </section>
 
@@ -155,6 +158,8 @@
 
 </body>
 </html>
+
+
 
 
 
